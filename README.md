@@ -1,1 +1,1 @@
-# java-convenience-store-precourse
+### woowacourse - my template
