@@ -4,11 +4,11 @@ import template.view.OutputView;
 
 public class XController {
 
-    private final IteratorInputHandler iteratorInputHandler;
+    private final InputHandler inputHandler;
     private final OutputView outputView;
 
-    public XController(IteratorInputHandler iteratorInputHandler, OutputView outputView) {
-        this.iteratorInputHandler = iteratorInputHandler;
+    public XController(InputHandler inputHandler, OutputView outputView) {
+        this.inputHandler = inputHandler;
         this.outputView = outputView;
     }
 
