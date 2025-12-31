@@ -1,8 +1,6 @@
 package template.converter;
 
-import template.util.ErrorMessage;
-
-public class StringToIntConverter implements Converter<String, Integer>{
+public class StringToIntConverter implements Converter<String, Integer> {
     @Override
     public Integer convert(String value) {
         try {
