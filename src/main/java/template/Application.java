@@ -1,7 +1,11 @@
 package template;
 
+import template.controller.XController;
+
 public class Application {
     public static void main(String[] args) {
-        // TODO: 프로그램 구현
+        XConfig xConfig = new XConfig();
+        XController xController = xConfig.xController();
+        xController.process();
     }
 }
