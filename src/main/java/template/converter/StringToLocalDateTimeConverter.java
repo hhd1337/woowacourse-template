@@ -13,6 +13,7 @@ public class StringToLocalDateTimeConverter implements Converter<String, LocalDa
     private static final DateTimeFormatter MINUTE_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
     private static final DateTimeFormatter SECOND_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
     private static final DateTimeFormatter TimeSecond = DateTimeFormatter.ofPattern("HH:mm:ss");
+    // 만약 /로 구분자가 되어있다면 yyyy-MM-dd HH:mm:ss 를 yyyy/MM/dd HH:mm:ss 로 변경!!
 
     @Override
     public LocalDateTime convert(String value) {
