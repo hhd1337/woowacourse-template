@@ -51,6 +51,26 @@ public class LocalDateTimeFormatter {
         return dayOfWeek.getDisplayName(TextStyle.FULL, Locale.KOREAN);
     }
 
+    // 이번 달 1일부터 오늘까지(포함) 일 단위로 순회
+    public static void iterateFromStartOfThisMonthToToday(LocalDate today) {
+        LocalDate date = today.withDayOfMonth(1);
+
+        while (!date.isAfter(today)) { // 오늘까지 포함!!!!! !date.isAfter(today.plusDays(1))
+
+            // 로직 구현!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+            date = date.plusDays(1);
+        }
+    }
+
+    // value가 현재 월에 포함되는 숫자인지(1~30,1~31,1~28) 검증함.
+    private void validateDayOfMonthRange(int value, LocalDate currentDate) {
+        LocalDate lastDate = currentDate.withDayOfMonth(currentDate.lengthOfMonth());
+        if (value < 1 || value > lastDate.getDayOfMonth()) {
+            throw new IllegalArgumentException("현재 월에 포함되는 날짜(일)를 입력해주세요.");
+        }
+    }
+
     // 년_월_일_시간_변경 후 반환하는 메소드 (웬만하면 호출하지말고 with, plus, minus 메소드 쓰기)
     public static LocalDateTime changeCurrentDateTime(LocalDateTime currDateTime, int changeNum) {
         LocalDateTime changedDateTime;
@@ -66,18 +86,6 @@ public class LocalDateTimeFormatter {
         changedDateTime = currDateTime.withSecond(changeNum);
 
         return changedDateTime;
-    }
-
-    // 이번 달 1일부터 오늘까지(포함) 일 단위로 순회
-    public static void iterateFromStartOfThisMonthToToday(LocalDate today) {
-        LocalDate date = today.withDayOfMonth(1);
-
-        while (!date.isAfter(today)) { // 오늘까지 포함!!!!! !date.isAfter(today.plusDays(1))
-
-            // 로직 구현!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-            date = date.plusDays(1);
-        }
     }
 
     // 두 날짜 사이의 일(day) 차이
