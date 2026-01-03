@@ -37,4 +37,17 @@ public class XController {
 //            // runD();
 //        }
 //    }
+
+    // 컨트롤러 내부 예외 안터질 때 까지 반복하는 루프 (입력 inputHandler 제외 부분에서 사용)
+//    private void retryUntilValid(Runnable action) {
+//        while (true) {
+//            try {
+//                action.run();
+//                return;
+//            } catch (IllegalArgumentException e) {
+//                System.out.println(ErrorMessage.PREFIX + e.getMessage());
+//                throw new IllegalArgumentException(e.getMessage());
+//            }
+//        }
+//    }
 }
