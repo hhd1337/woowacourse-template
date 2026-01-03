@@ -1,5 +1,6 @@
 package template.util;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -59,6 +60,34 @@ public final class Sorter {
             String a = /* o1에서 String 필드 꺼내기 */;
             String b = /* o2에서 String 필드 꺼내기 */;
             return b.compareTo(a);
+        });
+
+        return copy;
+    }
+
+    // 객체 리스트: LocalDate 필드 기준 오름차순 정렬 (날짜 순서대로)
+    public static <T> List<T> sortByDateFieldAsc(List<T> list) {
+        List<T> copy = new ArrayList<>(list);
+
+        // 정렬 로직 구현 (LocalDate 필드 오름차순)
+        copy.sort((o1, o2) -> {
+            LocalDate d1 = /* o1에서 LocalDate 필드 꺼내기 */;
+            LocalDate d2 = /* o2에서 LocalDate 필드 꺼내기 */;
+            return d1.compareTo(d2);
+        });
+
+        return copy;
+    }
+
+    // 객체 리스트: LocalDate 필드 기준 내림차순 정렬 (날짜 역 순서대로)
+    public static <T> List<T> sortByDateFieldDesc(List<T> list) {
+        List<T> copy = new ArrayList<>(list);
+
+        // 정렬 로직 구현 (LocalDate 필드 내림차순)
+        copy.sort((o1, o2) -> {
+            LocalDate d1 = /* o1에서 LocalDate 필드 꺼내기 */;
+            LocalDate d2 = /* o2에서 LocalDate 필드 꺼내기 */;
+            return d2.compareTo(d1);
         });
 
         return copy;
