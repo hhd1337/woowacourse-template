@@ -19,6 +19,7 @@ public class IteratorInputTemplate {
                 return converter.convert(input);
             } catch (IllegalArgumentException e) {
                 outputView.printErrorMessage(e);
+                // throw new IllegalArgumentException(ErrorMessage.PREFIX + e.getMessage());
             }
         }
     }
