@@ -3,11 +3,11 @@ package template.domain;
 import java.util.Arrays;
 
 public enum Menu {
-    MENU_A("1"),
-    MENU_B("2"),
-    MENU_C("3"),
-    MENU_D("4"),
-    QUIT("Q");
+    MENU_A("1"), // MENU_A를 기능 이름으로 바꾸기
+    MENU_B("2"), // MENU_B 기능 이름으로 바꾸기
+    MENU_C("3"), // MENU_C 기능 이름으로 바꾸기
+    MENU_D("4"), // MENU_D 기능 이름으로 바꾸기
+    QUIT("Q");   // QUIT이 없다면 지우기!! 그리고 Q가 아니라면 이름 바꾸기
 
     private final String symbol;
 
