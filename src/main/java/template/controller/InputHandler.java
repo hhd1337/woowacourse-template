@@ -24,7 +24,7 @@ public class InputHandler {
         this.inputTemplate = iteratorInputTemplate;
     }
 
-    // 메서드 템플릿
+    // 메서드 템플릿 설명
 //    private X InputView안의 메서드이름과 통일(/* 필요한 파라미터 (LocalDate currentDate)같은거 */) {
 //        return inputTemplate.execute(
 //                inputView::InputView안의 메서드,  // 1) InputView에서 원시 문자열을 입력받는 메서드 참조
@@ -44,7 +44,22 @@ public class InputHandler {
 //        );
 //    }
 
-    // 메서드 템플릿 사용예시
+    // Menu 메서드 템플릿 사용예시
+//    public Menu inputMenu() {
+//        StringToMenuConverter converter = new StringToMenuConverter();
+//        return inputTemplate.execute(
+//                inputView::inputMenu,
+//                value -> {
+//                    value = value.trim();
+////                    if (value.equals(Menu.INSERT_ATTENDANCE.getSymbol())) {
+////                        validateIsTodayAttendingDay(DateTimes.now().toLocalDate());
+////                    }
+//                    return converter.convert(value);
+//                }
+//        );
+//    }
+
+    // LocalDateTime 메서드 템플릿 사용예시
 //    private LocalDate inputAttendanceUpdateDayInMonth(LocalDate currentDate) {
 //        return inputTemplate.execute(
 //                inputView::inputAttendanceUpdateDayInMonth,
@@ -61,27 +76,5 @@ public class InputHandler {
 //                    }
 //                }
 //        );
-//    }
-
-    // 메서드 템플릿 사용예시 - validate 메서드까지
-//    public Menu inputMenu(LocalDateTime dateTime) {
-//        StringToMenuConverter converter = new StringToMenuConverter();
-//
-//        return inputTemplate.execute(
-//                inputView::inputMenu,
-//                (value) -> {
-//                    Menu menu = converter.convert(value);
-//                    validateMenu(dateTime, menu); // 이렇게 validate한다.
-//
-//                    return menu;
-//                }
-//        );
-//    }
-//
-//    private void validateMenu(LocalDateTime dateTime, Menu menu) {
-//        if (menu != MENU_A && menu != MENU_B) {
-//            return;
-//        }
-//        // 더 자세한 검증 로직...
 //    }
 }

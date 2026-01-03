@@ -89,6 +89,9 @@ public final class Sorter {
     }
 
 
+
+
+    // 아래 4개 : 정수 리스트 받는 템플릿
     // 정수 리스트를 오름차순(1,2,3...)으로 정렬 후 반환 (원본 유지)
     public static List<Integer> sortIntsAsc(List<Integer> numberList) {
         List<Integer> copy = new ArrayList<>(numberList);
@@ -99,9 +102,6 @@ public final class Sorter {
 
         return copy;
     }
-
-
-
 
     // 정수 리스트를 내림차순(3,2,1...)으로 정렬 후 반환 (원본 유지)
     public static List<Integer> sortIntsDesc(List<Integer> numberList) {
